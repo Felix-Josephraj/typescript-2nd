@@ -2,6 +2,7 @@ import React, { Dispatch } from 'react'
 import { UseTodoContext } from '../context/TodoContext'
 import { useAppSelector, useAppDispatch } from '../hooks'
 import { deleteList } from '../features/toDoSlice'
+import './ListDisplay.css'
 const ListDisplay = () => {
   const toDoList = useAppSelector((state) => state.toDoReducer)
   const { list } = UseTodoContext()
@@ -11,9 +12,10 @@ const ListDisplay = () => {
     <div>
       {toDoList.toDoid.map((value) => {
         return (
-          <div>
+          <div className='list-container'>
             <h2>{value}</h2>
             <button
+              className='btn'
               onClick={() => {
                 dispatch(deleteList(value))
               }}

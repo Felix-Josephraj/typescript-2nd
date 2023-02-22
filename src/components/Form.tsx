@@ -22,8 +22,8 @@ const Form = () => {
         }}
       >
         <input type='number' ref={todoIDref} />
+        <button type='submit'>Add</button>
       </form>
-      <button>Delete</button>
     </div>
   )
 }

@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <div>
+      <h1>To Do Display</h1>
       <Form />
       <ListDisplay />
       <ListDisplay2 qty={qty} list={listdisplay} />
