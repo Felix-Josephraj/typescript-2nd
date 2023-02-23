@@ -19,6 +19,9 @@ const Form = () => {
 
           updateList(Number(todoIDref.current?.value))
           dispatch(updateListRedux(Number(todoIDref.current?.value)))
+          if (todoIDref.current?.value) {
+            todoIDref.current.value = ''
+          }
         }}
       >
         <input type='number' ref={todoIDref} />
